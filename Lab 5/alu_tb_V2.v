@@ -13,8 +13,6 @@ integer correct, wrong;
 
 alu #(.N(N)) DUT (.operand_1(operand_1), .operand_2(operand_2), .opcode(opcode), .out(out), .status(status));
 
-//***************************//
-
 //driver task
 task driver;
     input [N-1 : 0] o1,o2;
@@ -50,7 +48,6 @@ task check;
     end
 endtask
 
-//***************************//
 initial begin
     wrong = 0;
     correct = 0;
